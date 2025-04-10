@@ -183,3 +183,62 @@ function closeCropModal() {
   currentTargetImg = null;
 }
 
+document.getElementById("btn-download").addEventListener("click", () => {
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+
+  const canvasWidth = 3000;
+  const canvasHeight = 3750;
+  canvas.width = canvasWidth;
+  canvas.height = canvasHeight;
+
+  const backgroundSrc = './picture/FRAMEPHOTOBOOTH304.png';
+  const imgElements = document.querySelectorAll(".img-sub");
+
+  const background = new Image();
+  background.src = backgroundSrc;
+
+  background.onload = () => {
+    ctx.drawImage(background, 0, 0, canvasWidth, canvasHeight);
+
+    const positions = [
+      { x: 80, y: 680 },
+      { x: 1505, y: 680 },
+      { x: 80, y: 1867 },
+      { x: 1505, y: 1867 }
+    ];
+
+    let loaded = 0;
+    let expected = 0;
+
+    imgElements.forEach((img, index) => {
+      if (img.src && !img.src.endsWith('/') && img.src !== window.location.href) {
+        expected++; // chỉ tính ảnh hợp lệ
+        const image = new Image();
+        image.crossOrigin = "anonymous";
+        image.src = img.src;
+
+        image.onload = () => {
+          const pos = positions[index];
+          ctx.drawImage(image, pos.x, pos.y, 1415, 1115);
+          loaded++;
+          if (loaded === expected) {
+            const link = document.createElement("a");
+            link.download = "ChaoMungKyNiem50nam.png";
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+          }
+        };
+      }
+    });
+
+    // Nếu không ảnh nào hợp lệ, báo lỗi
+    if (expected === 0) {
+      alert("Bạn chưa chọn đủ ảnh để tải xuống!");
+    }
+  };
+
+  background.onerror = () => {
+    alert("Không thể tải ảnh nền. Kiểm tra đường dẫn ./picture/FRAMEPHOTOBOOTH304.png");
+  };
+});
