@@ -1,0 +1,37 @@
+body{
+    background-color: #ffdcdc;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.background-box{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 500px;
+    background-position: center;
+    background-image: url('./picture/FRAMEPHOTOBOOTH304.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.container-box{
+    display: grid;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 20px;
+}
+.control-box{
+    display: flex;
+
+}
+.btn-dowload-picture{
+    background-color: #961A17;
+    border-radius: 15px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.btn-

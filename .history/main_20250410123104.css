@@ -1,0 +1,11 @@
+body{
+    background-color: #ffdcdc;
+}
+
+.background-box{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    w
+    background-image: url('./picture/FRAME\ PHOTOBOOTH\ 304.png');
+}

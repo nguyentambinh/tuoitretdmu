@@ -1,0 +1,14 @@
+body{
+    background-color: #ffdcdc;
+}
+
+.background-box{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 80%;
+    height: 500px;
+    background-image: url('./picture/FRAME\ PHOTOBOOTH\ 304.png');
+    background-size: contain;
+    back
+}

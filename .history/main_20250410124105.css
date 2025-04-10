@@ -1,0 +1,21 @@
+body{
+    background-color: #ffdcdc;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.background-box{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 500px;
+    background-position: center;
+    background-image: url('./picture/FRAMEPHOTOBOOTH304.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.

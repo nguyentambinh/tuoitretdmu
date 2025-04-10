@@ -1,0 +1,17 @@
+body{
+    background-color: #ffdcdc;
+    width: 900px;
+    margin: 0 auto;
+    a
+}
+
+.background-box{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 80%;
+    height: 500px;
+    background-image: url('./picture/FRAME\ PHOTOBOOTH\ 304.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
