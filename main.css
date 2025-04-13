@@ -1,5 +1,5 @@
 body {
-    background-color: #ffdcdc;
+    background-color: #e2f7c5;
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,7 +15,7 @@ body {
     max-width: 100%;
 }
 
-/* Thay vì dùng background-image, dùng thẻ <img> để đặt ảnh nền */
+
 .background-box {
     position: relative;
     width: 100%;
@@ -36,22 +36,22 @@ body {
 /* 4 ảnh con đè lên nền */
 .picture-box {
     position: absolute;
-    top: 49%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: grid;
+    border-color: #324F0B;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 6px 2px;
+    gap: 16px 16px;
 }
 
 
 .img-sub {
-    width: 190px;
-    border-color: #961A17;
-    height: 155px;
-    object-fit: cover;
-    background-size: contain;
+    width: 176px;
+    border-radius: 5px;
+    height: 137px;
+    background-size: cover;
     object-fit: cover;
     overflow: hidden;
 }
@@ -64,7 +64,7 @@ body {
 }
 
 .btn-custom {
-    background-color: #961A17;
+    background-color: #324F0B;
     border-radius: 15px;
     font-weight: bold;
     font-family: system-ui;
@@ -76,7 +76,26 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     cursor: pointer;
 }
-
+@media screen and (max-width: 420px){
+    .img-sub{
+        width: 41.5vw;
+        height: 32vw;
+    }
+    .picture-box{
+        gap: 14px 14px;
+        
+    }
+}
+@media screen and (max-width: 320px){
+    .img-sub{
+        width: 131px;
+        height: 102px;
+    }
+    .picture-box{
+        gap: 13px 13px;
+        left: 50.12%;
+    }
+}
 @media screen and (max-width: 720px) {
     .container-box {
         grid-template-columns: 1fr;
@@ -93,6 +112,7 @@ body {
     .btn-custom {
         width: 300px;
     }
+    
 }
 #modal-crop img {
     border: 1px solid #ccc;
