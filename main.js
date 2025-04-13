@@ -167,7 +167,7 @@ document.getElementById("btn-download").addEventListener("click", () => {
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
 
-  const imgWidth = 1310;
+  const imgWidth = 1312;
   const imgHeight = 1025;
 
   const background = new Image();
