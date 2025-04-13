@@ -167,8 +167,8 @@ document.getElementById("btn-download").addEventListener("click", () => {
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
 
-  const imgWidth = 1315;
-  const imgHeight = 1023;
+  const imgWidth = 1310;
+  const imgHeight = 1025;
 
   const background = new Image();
   background.src = './picture/FRAMEPHOTOBOOTH304.png';
@@ -179,9 +179,9 @@ document.getElementById("btn-download").addEventListener("click", () => {
 
     const positions = [
       { x: 125, y: 790 },
-      { x: 1560, y: 790 },
+      { x: 1565, y: 790 },
       { x: 125, y: 1935 },
-      { x: 1560, y: 1935 }
+      { x: 1565, y: 1935 }
     ];
 
     let loaded = 0;
