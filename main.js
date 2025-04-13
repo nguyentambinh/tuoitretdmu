@@ -219,10 +219,20 @@ imgElements.forEach((img, index) => {
 
       loaded++;
       if (loaded === expected) {
-        const link = document.createElement("a");
-        link.download = "ChaoMungKyNiem50nam.png";
-        link.href = canvas.toDataURL("image/png");
-        link.click();
+        const imageData = canvas.toDataURL("image/png");
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+          // Trên iPhone/iPad, mở ảnh ra để người dùng nhấn giữ và lưu
+          const newTab = window.open();
+          newTab.document.body.style.margin = "0";
+          newTab.document.body.innerHTML = `<img src="${imageData}" style="width:100%;height:auto;">`;
+        } else {
+          // Trên máy tính hoặc Android, vẫn dùng download như cũ
+          const link = document.createElement("a");
+          link.download = "ChaoMungKyNiem50nam.png";
+          link.href = imageData;
+          link.click();
+        }
+
       }
     };
   }
