@@ -181,7 +181,7 @@ document.getElementById("btn-download").addEventListener("click", () => {
       { x: 125, y: 790 },
       { x: 1565, y: 790 },
       { x: 125, y: 1935 },
-      { x: 1565, y: 1935 }
+      { x: 1563, y: 1935 }
     ];
 
     let loaded = 0;

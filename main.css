@@ -43,14 +43,14 @@ body {
     border-color: #324F0B;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 16px 16px;
+    gap: 15.5px 16px;
 }
 
 
 .img-sub {
     width: 176px;
     border-radius: 5px;
-    height: 137px;
+    height: 137.5px;
     background-size: cover;
     object-fit: cover;
     overflow: hidden;
