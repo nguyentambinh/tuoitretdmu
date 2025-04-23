@@ -29,6 +29,7 @@ document.getElementById("btn-add-picture").addEventListener("click", function ()
   document.body.appendChild(input);
   input.click();
   input.remove();
+  alert("Bạn hãy nhấp vào từng ảnh và cắt theo khung hình nhé.");
 });
 
 // Tạo modal cropper
@@ -87,7 +88,7 @@ imgSubs.forEach((img) => {
         if (cropper) cropper.destroy();
         cropper = new Cropper(cropImage, {
           viewMode: 1,
-          aspectRatio: 1,
+          aspectRatio: 176 / 137.5,
           autoCropArea: 0.8,
           movable: true,
           zoomable: true,
